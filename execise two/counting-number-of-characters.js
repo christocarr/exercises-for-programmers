@@ -14,7 +14,7 @@ input string and the numbers of characters the string contains */
 
 const nameInput = document.getElementById('nameInput');
 let userName = '';
-nameInput.addEventListener('keypress', ev => {
+nameInput.addEventListener('change', ev => {
   userName = ev.target.value;
 });
 const outputDiv = document.getElementById('output');
