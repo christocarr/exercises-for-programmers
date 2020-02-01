@@ -12,15 +12,19 @@ input string and the numbers of characters the string contains */
   2. Use HTML
 */
 
-
-const userInput = document.getElementById('userName')
-const outputDiv = document.getElementById('output')
-const submit = document.getElementById('submit')
+const nameInput = document.getElementById('nameInput');
+let userName = '';
+nameInput.addEventListener('keypress', ev => {
+  userName = ev.target.value;
+});
+const outputDiv = document.getElementById('output');
+const submit = document.getElementById('submit');
 submit.addEventListener('click', () => {
-  if (userInput === '') {
-    outputDiv.innerHTML = 'Please enter your name!'
+  if (userName === '') {
+    outputDiv.innerHTML = 'Please enter your name!';
+  } else {
+    const userNameLength = userName.length;
+    console.log(userNameLength);
+    outputDiv.innerHTML = userNameLength;
   }
-  const userNameLength = userInput.length
-  const output = 
-  outputDiv.innerHTML = userNameLength
-})
+});
