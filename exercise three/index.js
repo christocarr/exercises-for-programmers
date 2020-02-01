@@ -2,6 +2,7 @@
 
 const quoteInput = document.getElementById('quote')
 const authorInput = document.getElementById('author')
+const submitButton = document.getElementById('submit')
 let quote = '';
 let author = '';
 quoteInput.addEventListener('change', (ev) =>{
@@ -10,4 +11,8 @@ quoteInput.addEventListener('change', (ev) =>{
 
 authorInput.addEventListener('change', (ev) => {
   author = ev.target.value
+})
+
+submitButton.addEventListener('click', () => {
+  
 })
