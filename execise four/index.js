@@ -22,5 +22,6 @@ adjectiveInput.addEventListener('change', ev => {
   adjective = ev.target.value
 })
 makeMadLibButton.addEventListener('click', () => {
-  
+  output = `My ${adjective} ${noun} ${verb}s ${adverb}.`
+  outputDiv.innerHTML = output
 })
