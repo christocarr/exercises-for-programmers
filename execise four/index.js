@@ -3,6 +3,7 @@ const verbInput = document.getElementById('verb')
 const adverbInput = document.getElementById('adverb') 
 const adjectiveInput = document.getElementById('adjective')
 const makeMadLibButton = document.getElementById('makeMadLib')
+const outputDiv = document.getElementById('outputDiv')
 
 let noun; 
 let verb;
@@ -21,5 +22,5 @@ adjectiveInput.addEventListener('change', ev => {
   adjective = ev.target.value
 })
 makeMadLibButton.addEventListener('click', () => {
-  console.log(noun)
+  
 })
