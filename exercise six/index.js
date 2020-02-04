@@ -4,6 +4,7 @@
 const currentAgeInput = document.getElementById('currentAge')
 const retirementAgeInput = document.getElementById('retirementAge')
 const outputDiv = document.getElementById('outputDiv')
+const calculateButton = querySelector()
 
 let currentAge;
 let retirementAge;
