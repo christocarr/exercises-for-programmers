@@ -4,7 +4,7 @@
 const currentAgeInput = document.getElementById('currentAge')
 const retirementAgeInput = document.getElementById('retirementAge')
 const outputDiv = document.getElementById('outputDiv')
-const calculateButton = querySelector()
+const calculateButton = document.getElementById('calculateButton')
 
 let currentAge;
 let retirementAge;
@@ -17,17 +17,19 @@ retirementAgeInput.addEventListener('change', (ev) => {
   retirementAge = ev.target.value
 })
 
-const yearsLeftPara = document.createElement('p')
-const yearsLeft = retirementAge - currentAge
-yearsLeftPara.innerHTML = `You have ${yearsLeft} years left until you can retire.`
+calculateButton.addEventListener('click', () => {
+  const yearsLeftPara = document.createElement('p')
+  const yearsLeft = retirementAge - currentAge
+  yearsLeftPara.innerHTML = `You have ${yearsLeft} years left until you can retire.`
 
-outputDiv.appendChild(yearsLeftPara)
+  outputDiv.appendChild(yearsLeftPara)
 
-const now = new Date()
-const currentYear = now.getFullYear();
+  const now = new Date()
+  const currentYear = now.getFullYear();
+  
+  const retirementYearPara = document.createElement('p')
+  retirementYearPara.innerHTML = `It's ${currentYear}, so you can retire in ${currentYear + yearsLeft}.`
 
-const retirementYear = currentAgeInput + yearsLeft
-const retirementYearPara = document.createElement('p')
-retirementYearPara.innerHTML = `It's ${currentYear}, so you can retire in ${retirementYear}.`
+  outputDiv.appendChild(retirementYearPara)
+})
 
-outputDiv.appendChild(retirementYearPara)
