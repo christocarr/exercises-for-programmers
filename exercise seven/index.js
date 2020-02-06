@@ -18,6 +18,8 @@ function calculateArea() {
 
 view = {
   createOutput: function(feet, meters) {
+    lenthInput.value = ''
+    widthInput.value = ''
     const outputDiv = document.getElementById('outputDiv')
     outputDiv.innerHTML = ''
     const userInput = document.createElement('p')
