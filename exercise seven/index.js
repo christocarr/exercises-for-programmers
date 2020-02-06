@@ -11,6 +11,20 @@ widthInput.addEventListener('change', (ev) => {
 })
 
 function calculateArea() {
-  console.log(length, width)
+  const areaInFeet = length * width
+  const areaInMeters = areaInFeet * 0.09290304
+  view.createOutput(areaInFeet, areaInMeters)
 }
 
+view = {
+  createOutput: function(feet, meters) {
+    const outputDiv = document.getElementById('outputDiv')
+    outputDiv.innerHTML = ''
+    const areaInFeet = document.createElement('p')
+    const areaInMeters = document.createElement('p')
+    areaInFeet.textContent = feet
+    areaInMeters.textContent = meters
+    outputDiv.appendChild(areaInFeet)
+    outputDiv.appendChild(areaInMeters)
+  }
+}
