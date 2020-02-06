@@ -20,10 +20,13 @@ view = {
   createOutput: function(feet, meters) {
     const outputDiv = document.getElementById('outputDiv')
     outputDiv.innerHTML = ''
+    const userInput = document.createElement('p')
     const areaInFeet = document.createElement('p')
     const areaInMeters = document.createElement('p')
+    userInput.textContent = `You entered a length of ${length} feet and a width of ${width} feet.`
     areaInFeet.textContent = `The area in feet is ${feet} square feet.`
     areaInMeters.textContent = `The area in meters is ${meters} square meters.`
+    outputDiv.appendChild(userInput)
     outputDiv.appendChild(areaInFeet)
     outputDiv.appendChild(areaInMeters)
   }
