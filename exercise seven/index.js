@@ -22,8 +22,8 @@ view = {
     outputDiv.innerHTML = ''
     const areaInFeet = document.createElement('p')
     const areaInMeters = document.createElement('p')
-    areaInFeet.textContent = feet
-    areaInMeters.textContent = meters
+    areaInFeet.textContent = `The area in feet is ${feet} square feet.`
+    areaInMeters.textContent = `The area in meters is ${meters} square meters.`
     outputDiv.appendChild(areaInFeet)
     outputDiv.appendChild(areaInMeters)
   }
