@@ -6,9 +6,9 @@
   <title>Pizza Party</title>
 </head>
 <body>
-  <label>How many people present?<input onchange=""></label>
-  <label>How many pizza do you have?<input onchange=""></label>
-  <button onclick="">Calculate</button>
+  <label>How many people present?<input id="people" type="number" onchange="inputHandler()"></label>
+  <label>How many pizza do you have?<input id="pizzas" type="number" onchange="inputHandler()"></label>
+  <button onclick="calculateShare()">Calculate</button>
   <script src="index.js"></script>
 </body>
 </html>
