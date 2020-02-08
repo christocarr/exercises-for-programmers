@@ -47,3 +47,9 @@ function calculateTotal() {
 
   createOutput(totalAfterTax)
 }
+
+function createOutput(totalAfterTax) {
+  const outputDiv = document.createElement('div')
+  outputDiv.textContent = 'hi'
+  document.appendChild(outputDiv)
+}
