@@ -18,7 +18,6 @@ function calculate() {
   if (areaToPaint < oneGallonCovers) {
     const paintNeeded = 'One Gallon'
   } else {
-    
+    const gallonsNeeded = Math.ceil(areaToPaint / oneGallonCovers)
   }
-  console.log(oneGallonCovers / areaToPaint)
 }
