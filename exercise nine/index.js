@@ -1,5 +1,6 @@
 const lengthInput = document.getElementById('length')
 const widthInput = document.getElementById('width')
+const outputDiv = document.getElementById('outputDiv')
 
 let length;
 let width;
