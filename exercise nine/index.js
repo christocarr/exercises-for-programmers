@@ -17,8 +17,15 @@ function calculate() {
   const areaToPaint = length * width
   const oneGallonCovers = 350
   if (areaToPaint < oneGallonCovers) {
-    const paintNeeded = 'One Gallon'
+    let gallonsNeeded = 1
   } else {
-    const gallonsNeeded = Math.ceil(areaToPaint / oneGallonCovers)
+      gallonsNeeded = Math.ceil(areaToPaint / oneGallonCovers)
   }
+  createOutput(gallonsNeeded)
+}
+
+function createOutput(gallonsNeeded) {
+  const outputPara = document.createElement('p')
+  outputPara.textContent = `Gallons needed: ${gallonsNeeded}`
+  outputDiv.appendChild(outputPara)
 }
