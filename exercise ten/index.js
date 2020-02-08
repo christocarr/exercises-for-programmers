@@ -32,3 +32,18 @@ itemTwoQuantityInput.addEventListener('change', (ev) => {
 itemThreeQuantityInput.addEventListener('change', (ev) => {
   itemThreeQuantity = parseInt(ev.target.value)
 })
+
+function calculateTotal() {
+  const taxRate = 5.5
+  const itemOneTotalPrice = itemOnePrice * itemOneQuantity
+  const itemTwoTotalPrice = itemTwoPrice * itemTwoQuantity
+  const itemThreeTotalPrice = itemThreePrice * itemThreeQuantity
+
+  const totalBeforeTax = itemOneTotalPrice + itemTwoTotalPrice + itemThreeTotalPrice
+
+  const taxOnItems = (taxRate / 100) * totalBeforeTax
+  
+  const totalAfterTax = taxOnItems + totalBeforeTax
+
+  createOutput(totalAfterTax)
+}
