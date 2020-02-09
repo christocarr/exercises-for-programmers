@@ -12,3 +12,7 @@ exchangeRateInput.addEventListener('change', (ev) => {
   exchangeRate = Number(ev.target.value)
 })
 
+function calculateUSDollars() {
+  const USDollars = (euros * exchangeRate)
+  displayOutput(euros, exchangeRate, USDollars)
+}
