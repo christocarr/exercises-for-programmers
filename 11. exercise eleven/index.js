@@ -16,3 +16,17 @@ function calculateUSDollars() {
   const USDollars = (euros * exchangeRate)
   displayOutput(euros, exchangeRate, USDollars)
 }
+
+function displayOutput(euros, exchangeRate, USDollars) {
+  const eurosDisplay = document.createElement('p')
+  const exchangeRateDisplay = document.createElement('p')
+  const USDollarsDisplay = document.createElement('p')
+
+  eurosDisplay.textContent = `Euros: ${euros}`
+  exchangeRateDisplay.textContent = `Exchange rate: ${exchangeRate}`
+  USDollarsDisplay.textContent = `US Dollars: ${USDollars}`
+
+  outputDiv.appendChild(eurosDisplay)
+  outputDiv.appendChild(exchangeRateDisplay)
+  outputDiv.appendChild(USDollarsDisplay)
+}
