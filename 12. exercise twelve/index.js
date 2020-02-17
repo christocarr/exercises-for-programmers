@@ -26,6 +26,8 @@ function calculateInvestment() {
 }
 
 function displayOutput(interest, years, amountToBeAccured) {
+  
   const accuredAmountOutput = document.createElement('p')
   accuredAmountOutput.textContent = `After ${years} at ${interest}, the investment will be worth $${amountToBeAccured}.`
+  outputDiv.appendChild(accuredAmountOutput)
 }
