@@ -1,6 +1,7 @@
 const principalInput = document.getElementById('principalInput')
 const interestInput = document.getElementById('interestInput')
 const yearsInput = document.getElementById('yearsInput')
+const outputDiv = document.getElementById('outputDiv')
 
 let principalAmount = 0;
 let interest = 0
