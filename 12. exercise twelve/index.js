@@ -18,3 +18,9 @@ yearsInput.addEventListener('change', (ev) => {
   years = ev.target.value
 })
 
+function calculateInvestment() {
+  interest = interest / 100
+  
+  const amountToBeAccured = principalAmount * (1 + (interest * years))
+  console.log(amountToBeAccured)
+}
