@@ -20,13 +20,17 @@ yearsInput.addEventListener('change', (ev) => {
 })
 
 function calculateInvestment() {
-  interest = interest / 100
+  debugger
+  interest = Number(interest / 100)
+  years = Number(years)
+  principalAmount = Number(principalAmount)
   const amountToBeAccured = principalAmount * (1 + (interest * years))
   displayOutput(principalAmount, interest, years, amountToBeAccured)
 }
 
 function displayOutput(interest, years, amountToBeAccured) {
-  
+  console.log(amountToBeAccured)
+  interest = interest * 100
   const accuredAmountOutput = document.createElement('p')
   accuredAmountOutput.textContent = `After ${years} at ${interest}, the investment will be worth $${amountToBeAccured}.`
   outputDiv.appendChild(accuredAmountOutput)
