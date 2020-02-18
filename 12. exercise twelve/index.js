@@ -31,6 +31,6 @@ function calculateInvestment() {
 function displayOutput(principalAmount, interest, years, amountToBeAccured) {
   interest = interest * 100
   const accuredAmountOutput = document.createElement('p')
-  accuredAmountOutput.textContent = `After ${years} at ${interest}, the investment will be worth $${amountToBeAccured}.`
+  accuredAmountOutput.textContent = `After ${years} years at ${interest}%, the investment will be worth $${amountToBeAccured}.`
   outputDiv.appendChild(accuredAmountOutput)
 }
