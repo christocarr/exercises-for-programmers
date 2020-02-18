@@ -24,10 +24,10 @@ function calculateInvestment() {
   years = Number(years)
   principalAmount = Number(principalAmount)
   const amountToBeAccured = principalAmount * (1 + (interest * years))
-  displayOutput(principalAmount, interest, years, amountToBeAccured)
+  displayOutput(interest, years, amountToBeAccured)
 }
 
-function displayOutput(principalAmount, interest, years, amountToBeAccured) {
+function displayOutput(interest, years, amountToBeAccured) {
   interest = interest * 100
   const accuredAmountOutput = document.createElement('p')
   accuredAmountOutput.textContent = `After ${years} years at ${interest}%, the investment will be worth $${amountToBeAccured}.`
