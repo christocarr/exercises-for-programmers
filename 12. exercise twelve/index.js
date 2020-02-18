@@ -20,7 +20,6 @@ yearsInput.addEventListener('change', (ev) => {
 })
 
 function calculateInvestment() {
-  debugger
   interest = Number(interest / 100)
   years = Number(years)
   principalAmount = Number(principalAmount)
