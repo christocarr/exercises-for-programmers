@@ -1,6 +1,7 @@
 const principalInput = document.getElementById('principalInput');
 const interestInput = document.getElementById('interestInput');
 const yearsInput = document.getElementById('yearsInput');
+const yearsCompoundedInput = document.getElementById('yearsCompoundedInput')
 const outputDiv = document.getElementById('outputDiv');
 
 let principalAmount = 0;
