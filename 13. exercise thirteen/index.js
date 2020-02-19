@@ -7,7 +7,7 @@ const outputDiv = document.getElementById('outputDiv');
 let principalAmount = 0;
 let interest = 0;
 let years = 0;
-let yearsInterestCompunded = 0;
+let yearsInterestCompounded = 0;
 
 principalInput.addEventListener('change', ev => {
   principalAmount = ev.target.value;
@@ -29,7 +29,8 @@ function calculateInvestment() {
   interest = Number(interest / 100);
   years = Number(years);
   principalAmount = Number(principalAmount);
-  const amountToBeAccured = principalAmount * (1 + interest * years);
+  const power = yearsInterestCompounded * years
+  const amountToBeAccured = principalAmount * ((1 + interest / yearsInterestCompounded) * power);
   displayOutput(interest, years, amountToBeAccured);
 }
 
