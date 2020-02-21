@@ -37,7 +37,7 @@ function calculateInvestment() {
 function displayOutput(principalAmount, interest, years, yearsInterestCompounded, amountToBeAccured) {
   interest = interest * 100;
   const accuredAmountOutput = document.createElement('p');
-  accuredAmountOutput.textContent = `${principalAmount} invested at ${interest}% for ${years} compounded ${yearsInterestCompounded} times per year is ${amountToBeAccured}.`;
+  accuredAmountOutput.textContent = `$${principalAmount} invested at ${interest}% for ${years} compounded ${yearsInterestCompounded} times per year is $${amountToBeAccured}.`;
   outputDiv.appendChild(accuredAmountOutput);
   clearInputs();
 }
