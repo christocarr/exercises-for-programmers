@@ -31,13 +31,13 @@ function calculateInvestment() {
   principalAmount = Number(principalAmount);
   const power = yearsInterestCompounded * years
   const amountToBeAccured = principalAmount * ((1 + interest / yearsInterestCompounded) * power);
-  displayOutput(interest, years, amountToBeAccured);
+  displayOutput(principalAmount, interest, years, amountToBeAccured);
 }
 
-function displayOutput(interest, years, amountToBeAccured) {
+function displayOutput(principalAmount, interest, years, yearsInterestCompounded, amountToBeAccured) {
   interest = interest * 100;
   const accuredAmountOutput = document.createElement('p');
-  accuredAmountOutput.textContent = `After ${years} years at ${interest}%, the investment will be worth $${amountToBeAccured}.`;
+  accuredAmountOutput.textContent = `${principalAmount} invested at ${interest}% for ${years} compounded ${yearsInterestCompounded} times per year is ${amountToBeAccured}.`;
   outputDiv.appendChild(accuredAmountOutput);
   clearInputs();
 }
