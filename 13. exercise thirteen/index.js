@@ -31,7 +31,7 @@ function calculateInvestment() {
   principalAmount = Number(principalAmount);
   const power = yearsInterestCompounded * years
   const amountToBeAccured = principalAmount * ((1 + interest / yearsInterestCompounded) * power);
-  displayOutput(principalAmount, interest, years, amountToBeAccured);
+  displayOutput(principalAmount, interest, years, yearsInterestCompounded, amountToBeAccured);
 }
 
 function displayOutput(principalAmount, interest, years, yearsInterestCompounded, amountToBeAccured) {
