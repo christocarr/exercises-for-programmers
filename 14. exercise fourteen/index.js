@@ -31,11 +31,11 @@ function displayOutput(taxOnPurchase, total) {
   const tax = document.createElement('p')
   tax.textContent = `The tax is $${taxOnPurchase}.`
 
-  const total = document.createElement('p')
-  total.textContent = `The total is $${taxOnPurchase + total}.`
+  const totalOutput = document.createElement('p')
+  totalOutput.textContent = `The total is $${taxOnPurchase + total}.`
 
   outputDiv.innerHTML = subtotal
   outputDiv.innerHTML = tax
-  outputDiv.innerHTML = total
+  outputDiv.innerHTML = totalOutput
 }
 
