@@ -1,5 +1,6 @@
 const amountInput = document.getElementById('orderAmountInput')
 const stateInput = document.getElementById('stateInput')
+const outputDiv = document.getElementById('outputDiv')
 
 let amount
 let state
