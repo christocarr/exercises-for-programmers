@@ -25,6 +25,17 @@ function calculateTax() {
 }
 
 function displayOutput(taxOnPurchase, total) {
-  
+  const subtotal = document.createElement('p')
+  subtotal.textContent = `The subtotal is $${amount}.`
+
+  const tax = document.createElement('p')
+  tax.textContent = `The tax is $${taxOnPurchase}.`
+
+  const total = document.createElement('p')
+  total.textContent = `The total is $${taxOnPurchase + total}.`
+
+  outputDiv.innerHTML = subtotal
+  outputDiv.innerHTML = tax
+  outputDiv.innerHTML = total
 }
 
