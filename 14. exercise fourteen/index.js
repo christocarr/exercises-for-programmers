@@ -32,10 +32,10 @@ function displayOutput(taxOnPurchase, total) {
   tax.textContent = `The tax is $${taxOnPurchase}.`
 
   const totalOutput = document.createElement('p')
-  totalOutput.textContent = `The total is $${taxOnPurchase + total}.`
+  totalOutput.textContent = `The total is $${(taxOnPurchase + total).toFixed(2)}.`
 
-  outputDiv.innerHTML = subtotal
-  outputDiv.innerHTML = tax
-  outputDiv.innerHTML = totalOutput
+  outputDiv.appendChild(subtotal)
+  outputDiv.appendChild(tax)
+  outputDiv.appendChild(totalOutput)
 }
 
