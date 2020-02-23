@@ -1,4 +1,4 @@
-const amountInput = document.getElementById('amountInput')
+const amountInput = document.getElementById('orderAmountInput')
 const stateInput = document.getElementById('stateInput')
 
 let amount
@@ -7,7 +7,7 @@ amountInput.addEventListener('change', (ev) => {
   amount = Number(ev.target.value)
 })
 stateInput.addEventListener('change', ev => {
-  state = ev.target.value
+  state = ev.target.value.toUpperCase()
 })
 
 function calculateTax() {
@@ -24,6 +24,6 @@ function calculateTax() {
 }
 
 function displayOutput(taxOnPurchase, total) {
-  console.log(taxOnPurchase, total)
+  
 }
 
