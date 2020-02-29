@@ -23,5 +23,7 @@ function signInValidation() {
 }
 
 function displayMessage(message) {
-
+  const outputMessage = document.createElement('p')
+  outputMessage.textContent = message
+  outputDiv.appendChild(outputMessage)
 }
