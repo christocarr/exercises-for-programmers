@@ -12,5 +12,10 @@ passwordInput.addEventListener('change', ev => {
 
 function signInValidation() {
   const knownPassword = 'Password';
-
+  let message;
+  if (passwordAttempt === knownPassword) {
+    message = `Welcome!`;
+  } else {
+    message = `I don't know you.`;
+  }
 }
