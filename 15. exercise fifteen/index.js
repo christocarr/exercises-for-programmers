@@ -1,5 +1,6 @@
 const usernameInput = document.getElementById('usernameInput');
 const passwordInput = document.getElementById('passwordInput');
+const outputDiv = document.getElementById('outputDiv')
 
 let username, passwordAttempt;
 usernameInput.addEventListener('change', ev => {
@@ -18,4 +19,9 @@ function signInValidation() {
   } else {
     message = `I don't know you.`;
   }
+  displayMessage(message)
+}
+
+function displayMessage(message) {
+
 }
