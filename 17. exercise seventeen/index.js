@@ -21,6 +21,12 @@ hoursSinceLastDrinkInput.addEventListener('change', ev => {
 })
 
 function calculateBloodAlcohol() {
+  let alcoholDistributionRatio;
+  if (gender === male) {
+    alcoholDistributionRatio = 0.73
+  } else {
+    alcoholDistributionRatio = 0.66
+  }
   console.log(weight,alcoholConsumed, gender,hoursSinceLastDrink)
-  // const bloodAlcoholContent = ()
+  const bloodAlcoholContent = (alcoholConsumed * 5.14 / weight * alcoholDistributionRatio) - 0.015 * hoursSinceLastDrink
 }
