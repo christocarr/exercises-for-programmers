@@ -1,25 +1,26 @@
 const weightInput = document.getElementById('weightInput');
-const numberDrinksInput = document.getElementById('drinksInput');
+const alcoholConsumedInput = document.getElementById('alcoholConsumedInput');
 const genderInput = document.getElementById('genderInput');
-const lastDrinkTimeInput = document.getElementById('lastDrinkTimeInput');
+const hoursSinceLastDrinkInput = document.getElementById('hoursSinceLastDrinkInput');
 
-let weight, numberOfDrinks, gender, lastDrinkTime;
+let weight, alcoholConsumed, gender, hoursSinceLastDrink;
 weightInput.addEventListener('change', ev => {
   weight = Number(ev.target.value)
 })
 
-numberDrinksInput.addEventListener('change', ev => {
-  numberDinksInput = Number(ev.target.value)
+alcoholConsumedInput.addEventListener('change', ev => {
+  alcoholConsumed = Number(ev.target.value)
 })
 
 genderInput.addEventListener('change', ev => {
-  gender = Number(ev.target.value)
+  gender = ev.target.value
 })
 
-lastDrinkTimeInput.addEventListener('change', ev => {
-  lastDrinkTime = Number(ev.target.value)
+hoursSinceLastDrinkInput.addEventListener('change', ev => {
+  hoursSinceLastDrink = Number(ev.target.value)
 })
 
 function calculateBloodAlcohol() {
-  console.log(weight, age, gender, lastDrinkTime);
+  console.log(weight,alcoholConsumed, gender,hoursSinceLastDrink)
+  // const bloodAlcoholContent = ()
 }
