@@ -2,6 +2,7 @@ const weightInput = document.getElementById('weightInput');
 const alcoholConsumedInput = document.getElementById('alcoholConsumedInput');
 const genderInput = document.getElementById('genderInput');
 const hoursSinceLastDrinkInput = document.getElementById('hoursSinceLastDrinkInput');
+const outputDiv = document.getElementById('outputDiv')
 
 let weight, alcoholConsumed, gender, hoursSinceLastDrink;
 weightInput.addEventListener('change', ev => {
@@ -36,4 +37,10 @@ function calculateBloodAlcohol() {
   } else {
     message = `Your BAC is ${bloodAlcoholContent}, you can drive.`
   }
+
+  displayOutput(message)
+}
+
+function displayOutput(message) {
+  outputDiv.textContent = message
 }
