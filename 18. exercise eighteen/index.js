@@ -14,3 +14,12 @@ tempInput.addEventListener('change', ev => {
   temp = ev.target.value
 })
 
+function convertTemp() {
+  let tempErrorInputMessage, tempTypeErrorMessage
+  if (temp !== Number) {
+    tempErrorInputMessage = 'Temperature must be a number.'
+  }
+  if (tempType === '') {
+    tempTypeErrorMessage = 'Please select a temperature type to convert to.'
+  }
+}
