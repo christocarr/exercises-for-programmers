@@ -22,6 +22,7 @@ hoursSinceLastDrinkInput.addEventListener('change', ev => {
 
 function calculateBloodAlcohol() {
   let alcoholDistributionRatio;
+  let message;
   if (gender === 'male') {
     alcoholDistributionRatio = 0.73
   } else {
@@ -29,5 +30,10 @@ function calculateBloodAlcohol() {
   }
   console.log(weight,alcoholConsumed, gender,hoursSinceLastDrink)
   const bloodAlcoholContent = ((alcoholConsumed * 5.14) / (weight * alcoholDistributionRatio)) - (0.015 * hoursSinceLastDrink)
-  console.log(bloodAlcoholContent)
+  
+  if (bloodAlcoholContent >= 0.08) {
+    message = `Your BAC is ${bloodAlcoholContent}, it is not legal for you to drive.`
+  } else {
+    message = `Your BAC is ${bloodAlcoholContent}, you can drive.`
+  }
 }
