@@ -15,11 +15,13 @@ tempInput.addEventListener('change', ev => {
 })
 
 function convertTemp() {
+
   let tempErrorInputMessage, tempTypeErrorMessage
   if (temp !== Number) {
     tempErrorInputMessage = 'Temperature must be a number.'
   }
-  if (tempType === '') {
+  if (!celsiusOption.checked && !fahrenheitOption.checked) {
     tempTypeErrorMessage = 'Please select a temperature type to convert to.'
   }
+
 }
