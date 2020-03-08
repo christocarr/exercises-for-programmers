@@ -30,4 +30,11 @@ function convertTemp() {
   } else if (tempType === 'fahrenheit') {
     convertedTemp = (temp *  9 / 5) + 32
   }
+
+  outputTemp(convertedTemp, tempType)
+}
+
+function outputTemp(convertedTemp) {
+  const output = `The converted temperature is ${convertedTemp} ${tempType}.`
+  outputDiv.textContent = output
 }
