@@ -1,6 +1,7 @@
 const celsiusOption = document.getElementById('celsiusOption');
 const fahrenheitOption = document.getElementById('fahrenheitOption');
 const tempInput = document.getElementById('tempInput');
+const outputDiv = document.getElementById('outputDiv')
 
 let tempType;
 let temp;
@@ -28,6 +29,5 @@ function convertTemp() {
     console.log(convertedTemp)
   } else if (tempType === 'fahrenheit') {
     convertedTemp = (temp *  9 / 5) + 32
-    console.log(convertedTemp)
   }
 }
