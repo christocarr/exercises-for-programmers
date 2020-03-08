@@ -15,3 +15,18 @@ function calculateBMI() {
   displayOutput(BMI)
 }
 
+function displayOutput(BMI) {
+  let message
+  if (BMI > 18.5 && BMI < 25) {
+    message = `Your BMI is ${BMI}.
+    You are within the ideal weight range.`
+  } else if (BMI > 25) {
+    message = `Your BMI is ${BMI}.
+    You are overweight and should consult your doctor.`
+  } else {
+    message = `Your BMI is ${BMI}.
+    You are underweight and should see a doctor.`
+  }
+
+  outputDiv.textContent = message;
+}
