@@ -11,21 +11,21 @@ heightInput.addEventListener('change', ev => {
 });
 
 function calculateBMI() {
-  const BMI = (weight / (height * height)) * 703;
-  displayOutput(BMI)
+  const BMI = Math.round((weight / (height * height)) * 703);
+  displayOutput(BMI);
 }
 
 function displayOutput(BMI) {
-  let message
+  let message;
   if (BMI > 18.5 && BMI < 25) {
     message = `Your BMI is ${BMI}.
-    You are within the ideal weight range.`
+    You are within the ideal weight range.`;
   } else if (BMI > 25) {
     message = `Your BMI is ${BMI}.
-    You are overweight and should consult your doctor.`
+    You are overweight and should consult your doctor.`;
   } else {
     message = `Your BMI is ${BMI}.
-    You are underweight and should see a doctor.`
+    You are underweight and should see a doctor.`;
   }
 
   outputDiv.textContent = message;
