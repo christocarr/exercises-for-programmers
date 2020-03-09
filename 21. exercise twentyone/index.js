@@ -46,8 +46,12 @@ const getMonthName = () => {
       monthName = 'December'
       break
     default:
-      const error = `Please enter 1 - 12`
+      monthName = `Please enter 1 - 12`
       break
   }
-  console.log(monthName)
+  outputMonth(monthName)
+}
+
+const outputMonth = (month) => {
+  outputDiv.textContent = month
 }
