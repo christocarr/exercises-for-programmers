@@ -33,3 +33,7 @@ const compareNumbers = () => {
   }
   outputLargestNum(largestNum)
 }
+
+function outputLargestNum(num) {
+  outputDiv.textContent = `The largest number is ${num}`
+}
