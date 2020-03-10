@@ -29,7 +29,7 @@ const compareNumbers = () => {
     }
   })
   if (match) {
-    return 'Error'
+    outputDiv.textContent = `Some numbers match. Please enter different numbers`
   }
   outputLargestNum(largestNum)
 }
