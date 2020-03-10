@@ -14,11 +14,22 @@ thirdNumberInput.addEventListener('change', ev => {
   numbersArr.push(Number(ev.target.value))
 })
 const compareNumbers = () => {
-  let largestNum = 0;
-  numbersArr.map(num => {
+  let match = false
+  let iterator = 1
+  let largestNum = 0
+  numbersArr.forEach(num => {
+    for(let i = iterator; i < numbersArr.length; i++) {
+      if (num === numbersArr[i]) {
+        match = true
+      }
+    }
+    iterator ++
     if (num > largestNum) {
       largestNum = num
     }
   })
-  console.log(largestNum)
+  if (match) {
+    return 'Error'
+  }
+  outputLargestNum(largestNum)
 }
