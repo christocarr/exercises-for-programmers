@@ -14,5 +14,11 @@ thirdNumberInput.addEventListener('change', ev => {
   numbersArr.push(Number(ev.target.value))
 })
 const compareNumbers = () => {
-  console.log(numbersArr)
+  let largestNum = 0;
+  numbersArr.map(num => {
+    if (num > largestNum) {
+      largestNum = num
+    }
+  })
+  console.log(largestNum)
 }
