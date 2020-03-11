@@ -1,5 +1,8 @@
+const questionDiv = document.getElementById('questionDiv')
+
 const start = () => {
-  console.log(this)
+  const startButton = this.document.body.firstElementChild
+  startButton.classList.add('hide')
 }
 
 
