@@ -1,4 +1,9 @@
 const newQuestionDiv = document.getElementById('newQuestionDiv')
+const nextButton = document.getElementById('nextButton')
+
+nextButton.addEventListener('click', () => {
+  
+})
 
 const nextQuestion = () => {
   
