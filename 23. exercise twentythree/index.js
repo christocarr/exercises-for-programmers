@@ -1,6 +1,11 @@
 const newQuestionDiv = document.getElementById('newQuestionDiv')
 
+const nextQuestion = () => {
+  
+  const negBranchQuestions = ['Does the car make a clicking noise?', 'Does the car crank up but fail to start?', 'Does the engine start and then die?']
+  const posBranchQuestions = ['Are the battery terminals corroded?', 'Does the car have fuel injection?']
 
+}
 
 const createNewQuestion = (question) => {
   const div = document.createElement('div')
