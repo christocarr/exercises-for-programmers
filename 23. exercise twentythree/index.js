@@ -1,24 +1,27 @@
-const newQuestionDiv = document.getElementById('newQuestionDiv')
-const nextButton = document.getElementById('nextButton')
-
-nextButton.addEventListener('click', () => {
-  
-})
-
-const nextQuestion = () => {
-  
-  const negBranchQuestions = ['Does the car make a clicking noise?', 'Does the car crank up but fail to start?', 'Does the engine start and then die?']
-  const posBranchQuestions = ['Are the battery terminals corroded?', 'Does the car have fuel injection?']
-
+const start = () => {
+  console.log(this)
 }
 
-const createNewQuestion = (question) => {
-  const div = document.createElement('div')
-  const label = document.createElement('label')
-  const input = document.createElement('input')
 
-  label.appendChild(input)
-  div.appendChild(label)
+// let question;
+// nextButton.addEventListener('click', () => {
+//   question = 0
+// })
 
-  newQuestionDiv.appendChild(div)
-}
+// const nextQuestion = () => {
+  
+//   const negBranchQuestions = ['Does the car make a clicking noise?', 'Does the car crank up but fail to start?', 'Does the engine start and then die?']
+//   const posBranchQuestions = ['Are the battery terminals corroded?', 'Does the car have fuel injection?']
+
+// }
+
+// const createNewQuestion = (question) => {
+//   const div = document.createElement('div')
+//   const label = document.createElement('label')
+//   const input = document.createElement('input')
+
+//   label.appendChild(input)
+//   div.appendChild(label)
+
+//   newQuestionDiv.appendChild(div)
+// }
