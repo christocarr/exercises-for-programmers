@@ -22,10 +22,10 @@ const newQuestion = () => {
   const noLabel = document.createElement('label')
   yesInput.setAttribute('type', 'radio')
   yesInput.setAttribute('name', 'answer')
-  yesInput.setAttribute('value', 'true')
+  yesInput.setAttribute('value', true)
   noInput.setAttribute('type', 'radio')
   noInput.setAttribute('name', 'answer')
-  noInput.setAttribute('value', 'false')
+  noInput.setAttribute('value', false)
   yesLabel.textContent = 'Yes'
   noLabel.textContent = 'No'
   yesNoDiv.append(yesInput)
@@ -41,8 +41,9 @@ const newQuestion = () => {
 const checkAnswer = () => {
   const inputs = document.querySelectorAll('input')
   const answer = [...inputs].filter(item => {
-    console.log(item)
+    return item.checked ? true : false 
   })
+  console.log(answer)
 }
 
 
