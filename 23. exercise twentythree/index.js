@@ -43,16 +43,13 @@ const checkAnswer = () => {
   const inputs = document.querySelectorAll('input')
   const answerChoice = [...inputs].filter(item => {
     if (item.checked && item.getAttribute('value') === 'true') {
+      answer = true
       return item
     } else if (item.checked && item.getAttribute('value') === 'false') {
+      answer = false
       return item
     }
   })
-  if (answerChoice[0].getAttribute('value') === 'true') {
-    answer = true
-  } else if (answerChoice[0].getAttribute('value') === 'false') {
-    answer = false
-  }
 
   console.log(answer)
 }
