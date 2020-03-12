@@ -1,12 +1,15 @@
 const questionDiv = document.getElementById('questionDiv')
+const nextQuestionButton = document.getElementById('nextQuestionButton')
 
 const start = () => {
   const startButton = this.document.body.firstElementChild
   startButton.classList.add('hide')
   newQuestion()
+  nextQuestionButton.classList.remove('hide')
 }
 
 const newQuestion = () => {
+  let question = 1;
   const startingQues = document.createElement('p')
   const yesNoDiv = document.createElement('div')
   const yesInput = document.createElement('input')
@@ -26,27 +29,18 @@ const newQuestion = () => {
   startingQues.textContent = 'Is the car silent when you turn the key?'
   questionDiv.append(startingQues)
   questionDiv.append(yesNoDiv)
+
+  checkAnswer()
 }
 
-// let question;
-// nextButton.addEventListener('click', () => {
-//   question = 0
-// })
+const checkAnswer = () => {
+  const inputs = document.querySelectorAll('input')
+  const answer = [...inputs].filter(item => {
+    console.log(item)
+  })
+}
 
-// const nextQuestion = () => {
 
 //   const negBranchQuestions = ['Does the car make a clicking noise?', 'Does the car crank up but fail to start?', 'Does the engine start and then die?']
 //   const posBranchQuestions = ['Are the battery terminals corroded?', 'Does the car have fuel injection?']
 
-// }
-
-// const createNewQuestion = (question) => {
-//   const div = document.createElement('div')
-//   const label = document.createElement('label')
-//   const input = document.createElement('input')
-
-//   label.appendChild(input)
-//   div.appendChild(label)
-
-//   newQuestionDiv.appendChild(div)
-// }
