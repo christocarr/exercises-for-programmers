@@ -39,10 +39,21 @@ const newQuestion = () => {
 }
 
 const checkAnswer = () => {
+  let answer;
   const inputs = document.querySelectorAll('input')
-  const answer = [...inputs].filter(item => {
-    return item.checked ? true : false 
+  const answerChoice = [...inputs].filter(item => {
+    if (item.checked && item.getAttribute('value') === 'true') {
+      return item
+    } else if (item.checked && item.getAttribute('value') === 'false') {
+      return item
+    }
   })
+  if (answerChoice[0].getAttribute('value') === 'true') {
+    answer = true
+  } else if (answerChoice[0].getAttribute('value') === 'false') {
+    answer = false
+  }
+
   console.log(answer)
 }
 
