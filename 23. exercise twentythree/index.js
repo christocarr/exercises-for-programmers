@@ -3,6 +3,9 @@ const questionDiv = document.getElementById('questionDiv')
 const start = () => {
   const startButton = this.document.body.firstElementChild
   startButton.classList.add('hide')
+  const startingQues = document.createElement('p')
+  startingQues.textContent = 'Is the car silent when you turn the key?'
+  questionDiv.appendChild(startingQues)
 }
 
 
@@ -12,7 +15,7 @@ const start = () => {
 // })
 
 // const nextQuestion = () => {
-  
+
 //   const negBranchQuestions = ['Does the car make a clicking noise?', 'Does the car crank up but fail to start?', 'Does the engine start and then die?']
 //   const posBranchQuestions = ['Are the battery terminals corroded?', 'Does the car have fuel injection?']
 
