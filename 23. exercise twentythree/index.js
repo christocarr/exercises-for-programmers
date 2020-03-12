@@ -8,6 +8,10 @@ const start = () => {
   nextQuestionButton.classList.remove('hide')
 }
 
+nextQuestionButton.addEventListener('click', () => {
+  checkAnswer()
+})
+
 const newQuestion = () => {
   let question = 1;
   const startingQues = document.createElement('p')
@@ -30,7 +34,6 @@ const newQuestion = () => {
   questionDiv.append(startingQues)
   questionDiv.append(yesNoDiv)
 
-  checkAnswer()
 }
 
 const checkAnswer = () => {
