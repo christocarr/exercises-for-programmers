@@ -2,9 +2,10 @@ const questionDiv = document.getElementById('questionDiv')
 const nextQuestionButton = document.getElementById('nextQuestionButton')
 
 const start = () => {
+  questionPos = 0
   const startButton = this.document.body.firstElementChild
   startButton.classList.add('hide')
-  newQuestion()
+  newQuestion(answer = true, questionPos)
   nextQuestionButton.classList.remove('hide')
 }
 
@@ -12,9 +13,9 @@ nextQuestionButton.addEventListener('click', () => {
   checkAnswer()
 })
 
-const newQuestion = () => {
-  let question = 1;
-  const startingQues = document.createElement('p')
+const newQuestion = (answer, questionPos) => {
+  
+  const question = document.createElement('p')
   const yesNoDiv = document.createElement('div')
   const yesInput = document.createElement('input')
   const noInput = document.createElement('input')
@@ -32,8 +33,12 @@ const newQuestion = () => {
   yesNoDiv.append(yesLabel)
   yesNoDiv.append(noInput)
   yesNoDiv.append(noLabel)
-  startingQues.textContent = 'Is the car silent when you turn the key?'
-  questionDiv.append(startingQues)
+  if (answer) {
+    question.textContent = posBranchQuestions[questionPos]
+  } else {
+    question.textContent = negBranchQuestions[questionPos]
+  }
+  questionDiv.append(question)
   questionDiv.append(yesNoDiv)
 
 }
@@ -50,11 +55,12 @@ const checkAnswer = () => {
       return item
     }
   })
-
-  console.log(answer)
+ 
+  questionPos ++
+  newQuestion(answer, questionPos)
 }
 
 
-//   const negBranchQuestions = ['Does the car make a clicking noise?', 'Does the car crank up but fail to start?', 'Does the engine start and then die?']
-//   const posBranchQuestions = ['Are the battery terminals corroded?', 'Does the car have fuel injection?']
+  const negBranchQuestions = ['Does the car make a clicking noise?', 'Does the car crank up but fail to start?', 'Does the engine start and then die?']
+  const posBranchQuestions = ['Is the car silent when you turn the key?', 'Are the battery terminals corroded?', 'Does the car have fuel injection?']
 
