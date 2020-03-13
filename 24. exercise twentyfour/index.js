@@ -11,10 +11,16 @@ secondWordInput.addEventListener('change', ev => {
 
 const evalWords = () => {
   let err;
+  let isAnagram = false;
   if (firstWord.length === secondWord.length) {
-    
+    let secondWordReversed = ''
+    for (let i = secondWord.length -1; i > -1; i--) {
+      secondWordReversed += secondWord[i]
+    }
+    isAnagram = firstWord.includes(secondWordReversed)
   } else {
     err = 'Words are different lengths'
     console.log(err)
   }
+  console.log(isAnagram)
 }
