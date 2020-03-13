@@ -1,5 +1,6 @@
 const firstWordInput = document.getElementById('firstWordInput')
 const secondWordInput = document.getElementById('secondWordInput')
+const outputDiv = document.getElementById('outputDiv')
 
 let firstWord, secondWord
 firstWordInput.addEventListener('change', ev => {
