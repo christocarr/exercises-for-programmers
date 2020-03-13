@@ -8,3 +8,13 @@ firstWordInput.addEventListener('change', ev => {
 secondWordInput.addEventListener('change', ev => {
   secondWord = ev.target.value
 })
+
+const evalWords = () => {
+  let err;
+  if (firstWord.length === secondWord.length) {
+    
+  } else {
+    err = 'Words are different lengths'
+    console.log(err)
+  }
+}
