@@ -7,6 +7,6 @@ passwordInput.addEventListener('keyup', ev => {
 
 const passwordValidator = passwordString => {
   let string = passwordString.toLowerCase()
-  const stringArr = [...string]
+  const isOnlyChars = /^[a-z]+$/.test(string)
   
 };
