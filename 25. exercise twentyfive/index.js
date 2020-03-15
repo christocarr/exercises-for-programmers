@@ -23,6 +23,7 @@ const passwordValidator = passwordString => {
     message = 'Your password is strong';
   } else {
     message = 'Your password is very strong';
+    passwordInput.classList.add('good-password')
   }
 
   displayMessage(message)
