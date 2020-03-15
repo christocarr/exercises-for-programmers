@@ -1,4 +1,5 @@
 const passwordInput = document.getElementById('passwordInput');
+const messageElem = document.getElementById('messageElem')
 
 passwordInput.addEventListener('keyup', ev => {
   let passwordString = ev.target.value;
@@ -23,4 +24,6 @@ const passwordValidator = passwordString => {
   } else {
     message = 'Your password is very strong';
   }
+
+  
 };
