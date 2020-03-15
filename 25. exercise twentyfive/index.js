@@ -8,5 +8,5 @@ passwordInput.addEventListener('keyup', ev => {
 const passwordValidator = passwordString => {
   let string = passwordString.toLowerCase()
   const isOnlyChars = /^[a-z]+$/.test(string)
-  
+  const isTooShort = string.length < 8 ? true : false
 };
