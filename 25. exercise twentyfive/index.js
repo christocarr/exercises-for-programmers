@@ -25,5 +25,9 @@ const passwordValidator = passwordString => {
     message = 'Your password is very strong';
   }
 
-  
+  displayMessage(message)
 };
+
+const displayMessage = (message) => {
+  messageElem.textContent = message
+}
