@@ -1,5 +1,12 @@
-const passwordInput = document.getElementById("passwordInput")
+const passwordInput = document.getElementById('passwordInput');
 
-passwordInput.addEventListener('change', ev => {
-  let passwordString = ev.target.value
-})
+passwordInput.addEventListener('keyup', ev => {
+  let passwordString = ev.target.value;
+  passwordValidator(passwordString);
+});
+
+const passwordValidator = passwordString => {
+  let string = passwordString.toLowerCase()
+  const stringArr = [...string]
+  
+};
