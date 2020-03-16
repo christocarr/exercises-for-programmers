@@ -1,3 +1,7 @@
 .good-password {
   border: green 1px solid;
 }
+
+.bad-password {
+  border: red 1px solid;
+}
