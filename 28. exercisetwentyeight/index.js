@@ -1,4 +1,4 @@
-(function() {
+(function(calculate) {
 
   const inputDiv = document.getElementById('inputDiv')
 
@@ -13,6 +13,10 @@
     div.append(label)
     inputDiv.append(div)
     requiredNumbers ++
+  }
+
+  function calculate() {
+    console.log('click')
   }
   
 })()
