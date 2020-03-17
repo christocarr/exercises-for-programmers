@@ -1,6 +1,7 @@
 (function() {
 
   const inputDiv = document.getElementById('inputDiv')
+  const outputDiv = document.getElementById('outputDiv')
   const calcButton = document.getElementById('calcButton')
 
   let requiredNumbers = 1
@@ -17,8 +18,17 @@
   }
 
   calcButton.addEventListener('click', () => {
-    console.log('click')
+    let total = 0;
+    const inputs = document.querySelectorAll('input')
+    const numArr = [...inputs].map(input => {
+      return Number(input.value)
+    })
+    numArr.forEach(num => {
+      total += num
+    })
+    displayOutput(total)
   })
-
-  
+  const displayOutput = (total) => {
+    outputDiv.textContent = total
+  }
 })()
