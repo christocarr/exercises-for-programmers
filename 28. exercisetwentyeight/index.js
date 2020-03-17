@@ -1,6 +1,7 @@
-(function(calculate) {
+(function() {
 
   const inputDiv = document.getElementById('inputDiv')
+  const calcButton = document.getElementById('calcButton')
 
   let requiredNumbers = 1
   while (requiredNumbers < 6) {
@@ -15,8 +16,9 @@
     requiredNumbers ++
   }
 
-  function calculate() {
+  calcButton.addEventListener('click', () => {
     console.log('click')
-  }
+  })
+
   
 })()
