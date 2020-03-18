@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+  <script>
+    (function() {
+      const outputDiv = document.querySelector('div')
+      for (let i = 0; i < 13; i++) {
+        for (let j = 0; j < 13; j++) {
+          const multiplicationLine = document.createElement('p')
+          multiplicationLine.append(`${i} x ${j} = ${i * j}`)
+          outputDiv.append(multiplicationLine)
+        }
+      }
+    })()
+  </script>
+</body>
+</html>
