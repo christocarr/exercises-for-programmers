@@ -24,3 +24,14 @@ const calculate = () => {
   output(intensity, targetHeartRate)
 };
 
+const output = (intensity, targetHeartRate) => {
+  intensity = Math.floor(intensity * 100)
+  const tblRow = document.createElement('tr')
+  const tblData1 = document.createElement('td')
+  const tblData2 = document.createElement('td')
+  tblData1.textContent = `${intensity}%`
+  tblRow.append(tblData1)
+  tblData2.textContent = `${targetHeartRate}bpm`
+  tblRow.appendChild(tblData2)
+  tblBody.append(tblRow)
+}
