@@ -5,4 +5,8 @@ const startButton = document.querySelector('button');
 
 const startGame = () => {
   startButton.classList.add('hide')
-};
+    const selectedInput = [...inputs].filter(input => {
+      return input.checked === true
+    })
+    const selectedInputValue = selectedInput[0].value
+  };
