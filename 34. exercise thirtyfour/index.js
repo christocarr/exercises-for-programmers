@@ -1,6 +1,9 @@
 
   const EMPLOYEES = ['John Smith', 'Adam Apple', 'Tom Tomms', 'Julia Jewels', 'Carol Cousins']
   const outputDiv = document.getElementById('outputDiv')
+  const nameInput = document.querySelector('input')
+
+  let nameToRemove
 
   const employeeNumbers = `There are ${EMPLOYEES.length} employees:`
   outputDiv.append(employeeNumbers)
@@ -11,3 +14,7 @@
     outputDiv.append(employeeLine)
     iterator ++
   }
+
+  nameInput.addEventListener('change', (ev) => {
+    nameToRemove = ev.target.value
+  })
