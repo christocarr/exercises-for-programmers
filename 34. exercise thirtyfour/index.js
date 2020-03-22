@@ -25,5 +25,18 @@
         EMPLOYEES.splice(i, 1)
       }
     }
-    console.log(EMPLOYEES)
+    displayEmployees()
+  }
+
+  const displayEmployees = () => {
+    outputDiv.textContent = ''
+    const employeeNumbers = `There are ${EMPLOYEES.length} employees:`
+    outputDiv.append(employeeNumbers)
+    let iterator = 0
+    while (iterator < EMPLOYEES.length) {
+      const employeeLine = document.createElement('p')
+      employeeLine.textContent = EMPLOYEES[iterator]
+      outputDiv.append(employeeLine)
+      iterator ++
+    }
   }
