@@ -18,3 +18,12 @@
   nameInput.addEventListener('change', (ev) => {
     nameToRemove = ev.target.value
   })
+
+  const removeEmployee = () => {
+    for (let i = 0; i < EMPLOYEES.length; i ++) {
+      if (EMPLOYEES[i] === nameToRemove) {
+        EMPLOYEES.splice(i, 1)
+      }
+    }
+    console.log(EMPLOYEES)
+  }
