@@ -2,6 +2,7 @@ const outputDiv = document.querySelector('div')
 const nameInput = document.querySelector('input')
 
 let name = ''
+let nameArr = []
 
 nameInput.addEventListener('keyup', (ev) => {
   name = ev.target.value
@@ -10,6 +11,7 @@ nameInput.addEventListener('keyup', (ev) => {
     para.textContent = name
     outputDiv.append(para)
     ev.target.value = ''
+    nameArr.push(name)
   }
 })
 
