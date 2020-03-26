@@ -3,15 +3,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Generator</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="inputDiv">
+  <div>
     <label>Password length: <input type="number" min="8" id="lengthInput"></label>
+    
   </div>
-  <div class="inputDiv">
+  <div>
     <label>How many special characters: <input type="number" max="2" id="specialCharsInput"></label>
   </div>
-  <div class="inputDiv">
+  <div>
     <label>How many numbers: <input type="number" max="3" id="numbersInput"></label>
   </div>
   <button onclick="generatePassword()">Generate</button>

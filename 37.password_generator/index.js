@@ -6,14 +6,9 @@ const outputDiv = document.getElementById('outputDiv')
 
 let passwordLength, specialCharsLength, numbersLength 
 
-lengthInput.addEventListener('change', ev => {
-  let passwordLengthErrPara = document.createElement('p')
-  if (ev.target.value < 8) {
-    passwordLengthErrPara.textContent = 'Password must have 8 or more characters.'
-    inputDiv[0].append(passwordLengthErrPara)
-  } else {
-    passwordLength = ev.target.value
-  }
+lengthInput.addEventListener('keyup', ev => {
+  passwordLength = ev.target.value
+  validateInput()
 })
 specialCharsInput.addEventListener('change', ev => {
   let specialCharsInputErrPara = document.createElement('p')
@@ -33,6 +28,17 @@ numbersInput.addEventListener('change', ev => {
     numbersLength = ev.target.value
   }
 })
+
+const validateInput = () => {
+  const isLengthGood = passwordLength > 7 ? true : false
+  if (isLengthGood) {
+    const passwordLengthErrPara = document.createElement('p')
+    passwordLengthErrPara.textContent = 'Password must have 8 or more characters.'
+    inputDiv[0].append(passwordLengthErrPara)
+  } else {
+    
+  }
+}
 
 const generatePassword = () => {
   console.log(passwordLength, specialCharsLength, numbersLength)
