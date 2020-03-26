@@ -8,13 +8,15 @@
 <body>
   <div>
     <label>Password length: <input type="number" min="8" id="lengthInput"></label>
-    
+    <p id="inputErr" class="hide">Your password should be 8 characters or greater.</p>
   </div>
   <div>
     <label>How many special characters: <input type="number" max="2" id="specialCharsInput"></label>
+    <p id="inputErr" class="hide">Not more than 2 special characters.</p>
   </div>
   <div>
     <label>How many numbers: <input type="number" max="3" id="numbersInput"></label>
+    <p id="inputErr" class="hide">Not more than 3 numbers.</p>
   </div>
   <button onclick="generatePassword()">Generate</button>
   <div id="outputDiv"></div>
