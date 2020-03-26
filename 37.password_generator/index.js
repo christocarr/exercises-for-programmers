@@ -35,8 +35,29 @@ numbersInput.addEventListener('keyup', ev => {
 })
 
 const generatePassword = () => {
+  let letterLength = Number(passwordLength) - (Number(specialCharsLength) + Number(numbersLength))
+  const newPassword = []
   const specialChars = ['$', '*', '£', '%', '?', '!']
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
   const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
     'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+  
+  while (letterLength > 0) {
+    newPassword.push(letters[Math.floor(Math.random() * (letters.length - 1))])
+    letterLength --
+  }
+
+  while (specialCharsLength > 0) {
+    newPassword.push(specialChars[Math.floor(Math.random() * (specialChars.length - 1))])
+    specialCharsLength --
+  }
+
+  while (numbersLength > 0) {
+    newPassword.push(numbers[Math.floor(Math.random() * (numbers.length - 1))])
+    numbersLength --
+  }
+
+  outputDiv.textContent = `Your password is ${newPassword.join('')}`
+
 }
